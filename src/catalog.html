@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SitDownPls</title>
+
+  <link rel="preload" href="fonts/MullerRegular.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Bold.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Regular.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-SemiBold.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/playfair-display-black.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/playfair-display-black.woff2" as="font" crossorigin>
+
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="choices.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="nouislider.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <script defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script defer src="https://unpkg.com/@popperjs/core@2"></script>
+  <script defer src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+  <script defer src="https://unpkg.com/tippy.js@6"></script>
+  <script defer src="inputmask.min.js"></script>
+  <script defer src="just-validate.min.js"></script>
+  <script defer src="choices.min.js"></script>
+  <script defer src="nouislider.min.js"></script>
+  <script defer src="js/_catalog.js"></script>
+</head>
+<body>
+  <h1 class="visually-hidden">SitDownPls - интернет магазин мебели</h1>
+  @include('partials/header.html')
+    <main>
+      <section class="filter">
+          <div class="container">
+              <ul class="filter__navigation">
+                <li class="filter__list-navigation">
+                  <a class="filter__link-navigation" href="index.html">Главная /</a>
+                </li>
+                <li class="filter__list-navigation">
+                  <a class="filter__link-navigation" href="catalog.html">Каталог /</a>
+                </li>
+                <li class="filter__list-navigation">
+                  <a class="filter__link-navigation" href="#">Диваны /</a>
+                </li>
+                <li class="filter__list-navigation">
+                  <a class="filter__link-navigation filter__link-now" href="#">Прямые диваны</a>
+                </li>
+              </ul>
+              <div class="filter__section-main">
+                  <div class="filter__section-left">
+                      <h3 class="filter__left-heading">Фильтровать по:</h3>
+                      <form class="filter__form">
+                          <span class="filter__form-heading">Категория:</span>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Диваны
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Кресла
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Пуфы
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Кровати
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Тумбы
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Комоды
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Стулья
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Столы
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Аксессуары
+                              <span class="filter__check-box"></span>
+                          </label>
+                      </form>
+                      <div class="filter__range">
+                        <span class="filter__range-heading">Цена</span>
+                        <div class="filter__container-button">
+                          <div class="filter__from">
+                            <span class="filter__span-heading">от</span>
+                            <input class="filter__input-range" placeholder="2000" type="number" min="2000" max="150000" id="input0">
+                          </div>
+                          <div class="filter__before">
+                            <span class="filter__span-heading">до</span>
+                            <input class="filter__input-range" placeholder="150 000" type="number" min="2000" max="150000" id="input1">
+                          </div>
+                        </div>
+                        <div class="filter__slider-range" id="range-slider"></div>
+                      </div>
+                      <form class="filter__form">
+                          <span class="filter__form-heading">Скидка</span>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Более 5 000
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Менее 5 000
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Не важно
+                              <span class="filter__check-box"></span>
+                          </label>
+                      </form>
+                      <form class="filter__color-form">
+                          <span class="filter__form-heading">Цвет</span>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Коричневый
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Черный
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Бежевый
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Серый
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Белый
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Синий
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Оранжевый
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Желтый
+                              <span class="filter__check-box"></span>
+                          </label>
+                          <label class="filter__label">
+                              <input class="filter__check" type="checkbox" name="check">
+                              Зеленый
+                              <span class="filter__check-box"></span>
+                          </label>
+                      </form>
+                      <div class="filter__oxford">
+                        <div class="filter__container-oxford">
+                          <h2 class="filter__oxford-heading">Оксфорд 1950</h2>
+                          <p class="filter__oxford-inf">Новая коллекция изысканных кресел</p>
+                          <a class="filter__link" href="#">
+                            <span class="filter__heading-link">В каталог</span>
+                            <svg class="filter__icon-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_663_1822)">
+                                <circle class="filter__icon-bg" cx="11" cy="11" r="10" fill="CurrentColor" stroke="CurrentColor" stroke-width="2"/>
+                                <path d="M9.625 7.5625L13.0625 11L9.625 14.4375" stroke="CurrentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip06631822">
+                                <rect width="22" height="22" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="filter__section-right">
+                      <h2 class="filter__heading-right">Каталог</h2>
+                      <div class="filter__choice-drop">
+                        <ul class="filter__list-drop">
+                          <li class="filter__li-drop filter__li-heading">
+                            <span class="filter__heading-drop">Фильтры:</span>
+                          </li>
+                          <li class="filter__li-drop filter__li-drop_category">
+                            <button class="filter__item-button" data-path="category">Категория
+                              <svg class="filter__button-icon" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.65674 5.80521L11.5593 0.902607L12.3136 1.65685L6.65674 7.31371L0.999884 1.65685L1.75413 0.902607L6.65674 5.80521Z" fill="#A65CF0"/>
+                              </svg>
+                            </button>
+                            <div class="filter__dropdown">
+                              <form class="filter__form" data-target="category">
+                                <label class="filter__label">
+                                  <input class="filter__check" type="checkbox" name="check">
+                                  Диваны
+                                  <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Кресла
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Пуфы
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Кровати
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Тумбы
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Комоды
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Стулья
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Столы
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Аксессуары
+                                    <span class="filter__check-box"></span>
+                                </label>
+                              </form>
+                            </div>
+                          </li>
+                          <li class="filter__li-drop filter__li-drop_price">
+                            <button class="filter__item-button" data-path="price">Цена
+                              <svg class="filter__button-icon" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.65674 5.80521L11.5593 0.902607L12.3136 1.65685L6.65674 7.31371L0.999884 1.65685L1.75413 0.902607L6.65674 5.80521Z" fill="#A65CF0"/>
+                              </svg>
+                            </button>
+                            <div class="filter__dropdown" data-target="price">
+                              <div class="filter__from">
+                                <span class="filter__span-heading">от</span>
+                                <input class="filter__input-range filter__input-min" placeholder="2000">
+                              </div>
+                              <div class="filter__before">
+                                <span class="filter__span-heading">до</span>
+                                <input class="filter__input-range" placeholder="150 000">
+                              </div>
+                            </div>
+                          </li>
+                          <li class="filter__li-drop filter__li-drop_discount">
+                            <button class="filter__item-button" data-path="discount">Скидка
+                              <svg class="filter__button-icon" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.65674 5.80521L11.5593 0.902607L12.3136 1.65685L6.65674 7.31371L0.999884 1.65685L1.75413 0.902607L6.65674 5.80521Z" fill="#A65CF0"/>
+                              </svg>
+                            </button>
+                            <div class="filter__dropdown">
+                              <form class="filter__form" data-target="discount">
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Более 5 000
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Менее 5 000
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Не важно
+                                    <span class="filter__check-box"></span>
+                                </label>
+                              </form>
+                            </div>
+                          </li>
+                          <li class="filter__li-drop filter__li-drop_color">
+                            <button class="filter__item-button" data-path="color">Цвет
+                              <svg class="filter__button-icon" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.65674 5.80521L11.5593 0.902607L12.3136 1.65685L6.65674 7.31371L0.999884 1.65685L1.75413 0.902607L6.65674 5.80521Z" fill="#A65CF0"/>
+                              </svg>
+                            </button>
+                            <div class="filter__dropdown">
+                              <form class="filter__color-form" data-target="color">
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Коричневый
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Черный
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Бежевый
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Серый
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Белый
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Синий
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Оранжевый
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Желтый
+                                    <span class="filter__check-box"></span>
+                                </label>
+                                <label class="filter__label">
+                                    <input class="filter__check" type="checkbox" name="check">
+                                    Зеленый
+                                    <span class="filter__check-box"></span>
+                                </label>
+                              </form>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <ul class="filter__list filter__list-one">
+                        <li class="filter__li filter__card-active" data-target="one">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                5,0
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-1.png" alt="Диван кожаный R-94">
+                            <h3 class="filter__heading-card">Диван кожаный <br> “R-94”</h3>
+                            <span class="filter__price">94 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li filter__card-active" data-target="one">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,9
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-2.png" alt=">Диван апартековый T-75">
+                            <h3 class="filter__heading-card">Диван апартековый <br> “T-75”</h3>
+                            <span class="filter__price">69 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li filter__card-active" data-target="one">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,8
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-3.png" alt="Диван тканевый D-31">
+                            <h3 class="filter__heading-card">Диван тканевый <br> “D-31”</h3>
+                            <span class="filter__price">28 490 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li filter__card-active" data-target="one">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,8
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-4.png" alt="Диван велюровый Y-68">
+                            <h3 class="filter__heading-card">Диван велюровый <br> “Y-68”</h3>
+                            <span class="filter__price">22 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li filter__card-active" data-target="one">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,8
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-5.png" alt="Диван из шинила W-95">
+                            <h3 class="filter__heading-card">Диван из шинила <br> “W-95”</h3>
+                            <span class="filter__price">22 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li filter__card-active" data-target="one">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,8
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-6.png" alt="Диван флоковый G-41">
+                            <h3 class="filter__heading-card">Диван флоковый <br> “G-41”</h3>
+                            <span class="filter__price">17 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li filter__card-active" data-target="one">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,8
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-7.png" alt="Диван шиниловый V-43">
+                            <h3 class="filter__heading-card">Диван шиниловый <br> “V-43”</h3>
+                            <span class="filter__price">19 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li filter__card-active" data-target="one">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,7
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-8.png" alt="Диван велюровый S-99">
+                            <h3 class="filter__heading-card">Диван велюровый <br> “S-99”</h3>
+                            <span class="filter__price">19 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li filter__card-active" data-target="one">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,7
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-9.png" alt="Диван из кожзама F-85">
+                            <h3 class="filter__heading-card">Диван из кожзама <br> “F-85”</h3>
+                            <span class="filter__price">26 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="two">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,6
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-10.png" alt="Диван флоковый H-64">
+                            <h3 class="filter__heading-card">Диван флоковый <br> “H-64”</h3>
+                            <span class="filter__price">25 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="two">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,6
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-13.png" alt="Диван флоковый “H-58">
+                            <h3 class="filter__heading-card">Диван флоковый <br> “H-58”</h3>
+                            <span class="filter__price">23 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="two">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,6
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-14.png" alt="Диван из кожзама “R-43">
+                            <h3 class="filter__heading-card">Диван из кожзама <br> “R-43”</h3>
+                            <span class="filter__price">33 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="two">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,6
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-11.png" alt="Диван из шинила С-42">
+                            <h3 class="filter__heading-card">Диван из шинила <br> “С-42”</h3>
+                            <span class="filter__price">18 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="two">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,6
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-15.png" alt="Диван велюровый U-58">
+                            <h3 class="filter__heading-card">Диван велюровый <br> “U-58”</h3>
+                            <span class="filter__price">21 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="two">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,5
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-12.png" alt="Диван флоковый F-41">
+                            <h3 class="filter__heading-card">Диван флоковый <br> “F-41”</h3>
+                            <span class="filter__price">17 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="two">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,5
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-16.png" alt="Диван велюровый R-85">
+                            <h3 class="filter__heading-card">Диван велюровый <br> “R-85”</h3>
+                            <span class="filter__price">34 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="two">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,5
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-17.png" alt="Диван велюровый S-44">
+                            <h3 class="filter__heading-card">Диван велюровый <br> “S-44”</h3>
+                            <span class="filter__price">19 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="two">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,4
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-18.png" alt="Диван из шинила С-80">
+                            <h3 class="filter__heading-card">Диван из шинила <br> “С-80”</h3>
+                            <span class="filter__price">20 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                      </ul>
+                      <ul class="filter__list filter__list-two">
+                        <li class="filter__li filter__card-active" data-target="three">
+                          <span class="filter__star">
+                              <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                              </svg>
+                              5,0
+                          </span>
+                          <img class="filter__img-furniture" src="images/high-card-1.png" alt="Диван кожаный R-94">
+                          <h3 class="filter__heading-card">Диван кожаный <br> “R-94”</h3>
+                          <span class="filter__price">94 990 руб</span>
+                          <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li filter__card-active" data-target="three">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,9
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-2.png" alt=">Диван апартековый T-75">
+                            <h3 class="filter__heading-card">Диван апартековый <br> “T-75”</h3>
+                            <span class="filter__price">69 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li filter__card-active" data-target="three">
+                          <span class="filter__star">
+                              <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                              </svg>
+                              4,8
+                          </span>
+                          <img class="filter__img-furniture" src="images/high-card-4.png" alt="Диван велюровый Y-68">
+                          <h3 class="filter__heading-card">Диван велюровый <br> “Y-68”</h3>
+                          <span class="filter__price">22 990 руб</span>
+                          <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li filter__card-active" data-target="three">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,8
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-3.png" alt="Диван тканевый D-31">
+                            <h3 class="filter__heading-card">Диван тканевый <br> “D-31”</h3>
+                            <span class="filter__price">28 490 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li filter__card-active" data-target="three">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,8
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-5.png" alt="Диван из шинила W-95">
+                            <h3 class="filter__heading-card">Диван из шинила <br> “W-95”</h3>
+                            <span class="filter__price">22 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li filter__card-active" data-target="three">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,8
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-6.png" alt="Диван флоковый G-41">
+                            <h3 class="filter__heading-card">Диван флоковый <br> “G-41”</h3>
+                            <span class="filter__price">17 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="four">
+                          <span class="filter__star">
+                              <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                              </svg>
+                              4,8
+                          </span>
+                          <img class="filter__img-furniture" src="images/high-card-7.png" alt="Диван шиниловый V-43">
+                          <h3 class="filter__heading-card">Диван шиниловый <br> “V-43”</h3>
+                          <span class="filter__price">19 990 руб</span>
+                          <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="four">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,7
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-8.png" alt="Диван велюровый S-99">
+                            <h3 class="filter__heading-card">Диван велюровый <br> “S-99”</h3>
+                            <span class="filter__price">19 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="four">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,7
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-9.png" alt="Диван из кожзама F-85">
+                            <h3 class="filter__heading-card">Диван из кожзама <br> “F-85”</h3>
+                            <span class="filter__price">26 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="four">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,6
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-10.png" alt="Диван флоковый H-64">
+                            <h3 class="filter__heading-card">Диван флоковый <br> “H-64”</h3>
+                            <span class="filter__price">25 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="four">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,6
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-13.png" alt="Диван флоковый “H-58">
+                            <h3 class="filter__heading-card">Диван флоковый <br> “H-58”</h3>
+                            <span class="filter__price">23 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="four">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,6
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-14.png" alt="Диван из кожзама “R-43">
+                            <h3 class="filter__heading-card">Диван из кожзама <br> “R-43”</h3>
+                            <span class="filter__price">33 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="five">
+                          <span class="filter__star">
+                              <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                              </svg>
+                              4,6
+                          </span>
+                          <img class="filter__img-furniture" src="images/high-card-11.png" alt="Диван из шинила С-42">
+                          <h3 class="filter__heading-card">Диван из шинила <br> “С-42”</h3>
+                          <span class="filter__price">18 990 руб</span>
+                          <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="five">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,6
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-15.png" alt="Диван велюровый U-58">
+                            <h3 class="filter__heading-card">Диван велюровый <br> “U-58”</h3>
+                            <span class="filter__price">21 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="five">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,5
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-12.png" alt="Диван флоковый F-41">
+                            <h3 class="filter__heading-card">Диван флоковый <br> “F-41”</h3>
+                            <span class="filter__price">17 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="five">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,5
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-16.png" alt="Диван велюровый R-85">
+                            <h3 class="filter__heading-card">Диван велюровый <br> “R-85”</h3>
+                            <span class="filter__price">34 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                      </li>
+                      <li class="filter__li" data-target="five">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,5
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-17.png" alt="Диван велюровый S-44">
+                            <h3 class="filter__heading-card">Диван велюровый <br> “S-44”</h3>
+                            <span class="filter__price">19 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                        <li class="filter__li" data-target="five">
+                            <span class="filter__star">
+                                <svg class="filter__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                                </svg>
+                                4,4
+                            </span>
+                            <img class="filter__img-furniture" src="images/high-card-18.png" alt="Диван из шинила С-80">
+                            <h3 class="filter__heading-card">Диван из шинила <br> “С-80”</h3>
+                            <span class="filter__price">20 990 руб</span>
+                            <button class="filter__button-buy" onclick="window.location.href = 'card.html';">Купить</button>
+                        </li>
+                      </ul>
+                      <ul class="filter__list-button">
+                        <li class="filter__li-button">
+                          <button class="filter__button is-active" data-path="one">1</button>
+                        </li>
+                        <li class="filter__li-button">
+                          <button class="filter__button" data-path="two">2</button>
+                        </li>
+                      </ul>
+                      <ul class="filter__button-adapt">
+                        <li class="filter__li-button">
+                          <button class="filter__button is-active" data-path="three">1</button>
+                        </li>
+                        <li class="filter__li-button">
+                          <button class="filter__button" data-path="four">2</button>
+                        </li>
+                        <li class="filter__li-button">
+                          <button class="filter__button" data-path="five">3</button>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @include('partials/footer.html')
+</body>
+</html>

@@ -1,0 +1,552 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+body {
+  min-width: 320px;
+}
+
+.filter {
+  padding-bottom: 35px;
+  &__navigation {
+    display: flex;
+    align-items: center;
+    padding-bottom: 32px;
+    margin-top: -15px;
+  }
+  &__list-navigation {
+    &:not(:last-child) {
+      margin-right: 3px;
+    }
+  }
+  &__link-navigation {
+    font-size: 14px;
+    line-height: 14px;
+    color: $color-grey;
+    transition: color .3s ease-in-out;
+    &:hover {
+      color: $color-primary;
+    }
+    &:focus {
+      outline: none;
+      color: $color-primary-shade;
+    }
+    &:active {
+      color: $color-primary-shade;
+    }
+  }
+  &__link-now {
+    color: $color-primary-shade;
+  }
+  &__section-main {
+      display: flex;
+  }
+  &__section-left {
+      margin-right: 32px;
+      width: calc(296 / 1162 * 100%);
+  }
+  &__section-right {
+      width: calc(952 / 1162 * 100%);
+  }
+  &__left-heading {
+      margin: 0;
+      margin-bottom: 20px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      color: $color-black;
+  }
+  &__form {
+      display: flex;
+      flex-direction: column;
+      &:not(:last-child) {
+          margin-bottom: 26px;
+      }
+  }
+  &__color-form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 89px;
+  }
+  &__form-heading {
+      margin-bottom: 9px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      color: $color-grey-shade;
+  }
+  &__range {
+      margin-bottom: 37px;
+  }
+  &__range-heading {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      color: $color-grey-shade;
+  }
+  &__span-heading {
+      font-size: 16px;
+      line-height: 21px;
+      color: $color-grey-shade;
+  }
+  &__input-range {
+      padding: 4px 17px;
+      width: 90px;
+      border: 1px solid $color-grey;
+      font-size: 16px;
+      line-height: 21px;
+      color: $color-grey-shade;
+      background-color: transparent;
+      transition: border-color .3s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid $color-primary;
+      }
+      &:focus:not(:active) {
+        outline: none;
+        border: 1px solid $color-primary;
+        background-color: $color-pink-violet;
+      }
+      &:active {
+        border: 1px solid $color-primary-shade;
+      }
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  .noUi-target {
+    background-color: $color-md-grey;
+    border: none;
+    border-radius: 100px;
+    box-shadow: none;
+    height: 3px;
+  }
+  .noUi-connect {
+    background-color: $color-primary;
+  }
+  .noUi-handle:after, .noUi-handle:before {
+    display: none;
+  }
+  .noUi-handle {
+    position: relative;
+    top: 0;
+    left: 97%;
+    box-shadow: none;
+    border: none;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 13px solid $color-primary;
+    background-color: transparent;
+    cursor: pointer;
+    transition: border-color .3s ease-in-out;
+    &:hover {
+      border-bottom: 13px solid $color-primary-light;
+    }
+    &:focus{
+      outline: none;
+      border-bottom: 13px solid $color-primary-shade;
+    }
+    &:active {
+      border-bottom: 13px solid $color-primary-shade;
+    }
+  }
+  &__oxford {
+      background-image: url(../images/caralog-oxford.jpg);
+      background-repeat: no-repeat;
+      min-height: 170px;
+      border-radius: 10px;
+      background-color: $color-black;
+  }
+  &__container-oxford {
+      padding: 220px 67px 30px 30px;
+  }
+  &__heading-link {
+    margin-right: 10px;
+    border-bottom: 1px solid transparent;
+  }
+  &__oxford-heading{
+      margin: 0px;
+      font-weight: 900;
+      font-family: $font-playfair;
+      font-size: 24px;
+      line-height: 32px;
+      color: $color-gold;
+  }
+  &__oxford-inf {
+      margin: 0px;
+      margin-bottom: 12px;
+      font-size: 16px;
+      line-height: 22px;
+      color: $color-grey;
+  }
+  &__link {
+      display: flex;
+      align-items: center;
+      transition: all .3s ease-in-out;
+      color: $color-primary;
+      &:hover {
+          color: $color-white;
+      }
+      &:focus:not(:active) {
+          outline: none;
+          color: $color-white;
+      }
+      &:active {
+          color: $color-white;
+      }
+  }
+  &__icon-bg {
+      fill: transparent;
+  }
+  &__link:hover &__heading-link  {
+      border-bottom: 1px solid $color-primary;
+  }
+  &__link:focus:not(:active) &__heading-link  {
+      border-bottom: 1px solid $color-primary;
+  }
+  &__link:active &__heading-link  {
+      color: $color-primary-shade;
+      border-bottom: 1px solid $color-primary-shade;
+  }
+  &__link:hover &__icon-bg {
+      fill: $color-primary;
+      stroke: $color-primary;
+  }
+  &__link:focus:not(:active) &__icon-bg {
+      fill: $color-primary-light;
+      stroke: $color-primary;
+  }
+  &__link:active &__icon-bg {
+      fill: $color-primary-shade;
+      stroke: $color-primary-shade;
+  }
+  &__container-button {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+  }
+  &__label {
+      position: relative;
+      padding-left: 30px;
+      width: max-content;
+      font-size: 16px;
+      line-height: 21px;
+      color: $color-grey-shade;
+      cursor: pointer;
+      &:not(:last-child) {
+          margin-bottom: 11px;
+      }
+  }
+  &__check {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+  }
+  &__check-box {
+      position: absolute;
+      top: 0;
+      left: 0px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-grey;
+      border-radius: 2px;
+      cursor: pointer;
+  }
+  &__check:checked + &__check-box {
+      border: 1px solid $color-primary;
+      background-color: $color-primary;
+      background-repeat: no-repeat;
+      background-image: url(../images/arrow-check.svg);
+      background-position: center;
+  }
+  &__check:focus + &__check-box {
+      border: 1px solid $color-primary;
+  }
+  &__heading-right {
+      margin-top: 0px;
+      margin-bottom: 20px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 31px;
+      color: $color-black;
+  }
+  &__li {
+      position: relative;
+      padding: 90px 30px 30px 30px;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      border-radius: 10px;
+      background-color: $color-grey_light;
+  }
+  &__heading-card {
+      @include headingCard();
+      margin-bottom: 20px;
+  }
+  &__price {
+      display: block;
+      margin-bottom: 24px;
+      width: max-content;
+      font-size: 16px;
+      line-height: 21px;
+      color: $color-grey-shade;
+  }
+  &__button-buy {
+      @include buttonCard();
+      cursor: pointer;
+      transition: background-color .3s ease-in-out, color .3s ease-in-out;
+      &:hover {
+          color: $color-white;
+          background-color: $color-primary;
+      }
+      &:focus:not(:active) {
+          outline: none;
+          background-color: $color-primary-light;
+          color: $color-white;
+      }
+      &:active {
+          background-color: $color-primary-shade;
+      }
+  }
+  &__img-furniture {
+      max-width: 100%;
+      margin-bottom: 15px;
+      min-height: 103px;
+      object-fit: contain;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  &__star {
+      position: absolute;
+      top: 30px;
+      font-size: 16px;
+      line-height: 21px;
+      color: $color-secondary;
+  }
+  &__button {
+      padding: 4px 9px;
+      border-radius: 10px;
+      border: 2px solid $color-primary;
+      color: $color-primary;
+      background-color: transparent;
+      transition: color .3s ease-in-out, background-color .3s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+      &:focus:not(:active) {
+        outline: none;
+        background-color: $color-primary-light;
+        border-color: $color-primary;
+        color: $color-white;
+      }
+      &:active {
+        background-color: $color-primary-shade;
+        color: $color-white;
+      }
+  }
+  &__list-button {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  &__li-button:not(:last-child) {
+      margin-right: 16px;
+  }
+  &__button-adapt {
+    display: none;
+  }
+  &__li {
+    display: none;
+  }
+  &__card-active {
+      display: flex;
+      align-items: flex-start;
+  }
+  &__choice-drop {
+    display: none;
+  }
+  &__list-two {
+    display: none;
+  }
+  .is-active {
+      border: 2px solid $color-primary-shade;
+      background-color: $color-primary-shade;
+      color: $color-white;
+  }
+}
+
+@media (max-width: 1255px) {
+  .filter {
+    &__section-left {
+      display: none;
+    }
+    &__section-right {
+      width: 100%;
+    }
+    &__choice-drop {
+      display: block;
+      margin-bottom: 32px;
+    }
+    &__dropdown {
+      position: absolute;
+      padding: 20px 20px 30px 30px;
+      min-width: 187px;
+      z-index: 5;
+      opacity: 0;
+      border-radius: 10px;
+      border: 1px solid $color-md-grey;
+      background-color: $color-white;
+      visibility: hidden;
+      transition: visibility .3s ease-in-out, opacity .3s ease-in-out
+    }
+    &__input-min {
+      margin-bottom: 10px;
+    }
+    &__button-icon-rotate {
+      transform: rotate(180deg);
+    }
+    &__dropdown-active {
+      opacity: 1;
+      visibility: visible;
+    }
+    &__list-drop {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__heading-drop {
+      font-size: 14px;
+      line-height: 18px;
+      color: $color-black;
+    }
+    &__item-button {
+      position: relative;
+      padding: 9px 20px;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: start;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      min-width: 187px;
+      background-color: $color-md-grey;
+      color: $color-black;
+    }
+    .active-button {
+      border: 2px solid $color-primary-shade;
+    }
+    &__button-icon {
+      position: absolute;
+      right: 5.4%;
+      top: 40%;
+      transition: transform .3s ease-in-out;
+    }
+    &__img-furniture {
+      margin-bottom: 14px;
+    }
+    &__heading-card {
+      margin-bottom: 21px;
+    }
+    &__heading-right {
+      margin-bottom: 13px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .filter {
+    &__list-drop {
+      display: grid;
+      justify-content: inherit;
+    }
+    &__list-button {
+      display: none;
+    }
+    &__button-adapt {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__list-one {
+      display: none;
+    }
+    &__list-two {
+      display: grid;
+    }
+    &__heading-right {
+      margin-bottom: 25px;
+    }
+    &__item-button {
+      padding: 9px 14px;
+    }
+    &__button-icon {
+      right: 7.4%;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .filter {
+    &__navigation {
+      display: none;
+    }
+    &__item-button {
+      min-width: 100%;
+    }
+    &__dropdown {
+      padding: 10px;
+      min-width: 140px;
+    }
+    &__li {
+      padding: 49px 16px 16px 16px;
+    }
+    &__heading {
+        font-size: 24px;
+        line-height: 24px;
+    }
+    &__heading-card {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &__button-buy {
+        padding: 12px 23px;
+    }
+    &__star {
+        top: 17px;
+        left: 16px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    &__ison-star {
+        width: 13px;
+        height: 12px;
+    }
+    &__price {
+        margin-bottom: 10px;
+    }
+    &__img-furniture {
+      margin-bottom: 14px;
+      height: 41px;
+      min-height: auto;
+    }
+    &__heading-right {
+      margin-bottom: 15px;
+      margin-top: -4px;
+    }
+    &__item-button {
+      padding: 7px 14px;
+    }
+  }
+}

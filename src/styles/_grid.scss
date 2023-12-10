@@ -1,0 +1,176 @@
+.high {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 32px;
+        margin-bottom: 32px;
+    }
+}
+
+.filter {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3,31%);
+      grid-gap: 32px;
+    }
+}
+
+.footer {
+  &__list {
+    display: grid;
+    gap: 20px 112px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.categories {
+    &__list {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    &__li_big {
+        grid-column: span 3;
+    }
+    &__li_small {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 1255px) {
+    .high {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    .categories {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &__li_small_mobile {
+            grid-column: span 1;
+        }
+        &__li_big_mobile {
+            grid-column: span 2;
+        }
+        &__li_bed {
+            order: -1;
+        }
+        &__li_sofa {
+            order: -1;
+        }
+        &__li_dressers {
+            order: -1;
+        }
+    }
+    .filter {
+      &__list {
+        grid-template-rows: repeat(3,30.9%);
+      }
+    }
+    .footer {
+      &__list {
+        gap: 0px 65px;
+      }
+    }
+}
+
+@media (max-width: 950px) {
+    .high {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .categories {
+        &__list {
+            gap: 30px;
+            grid-template-columns: repeat(2, 47.6%);
+        }
+        &__li_small_mobile {
+            grid-column: span 1;
+        }
+        &__li_big_mobile {
+            grid-column: span 2;
+        }
+        &__li_dressers {
+            order: 0;
+        }
+    }
+    .filter {
+      &__li-heading {
+        grid-area: filterheading;
+      }
+      &__li-drop_category {
+        grid-area: filtercategory;
+      }
+      &__li-drop_price {
+        grid-area: filterprice;
+      }
+      &__li-drop_discount {
+        grid-area: filterdiscount;
+      }
+      &__li-drop_color {
+        grid-area: filterfourcolor;
+      }
+      &__list-drop {
+        grid-template-columns: repeat(2, 186px);
+        gap: 13px 32px;
+        grid-template-areas:
+        "filterheading filterheading"
+        "filtercategory filterprice"
+        "filterdiscount filterfourcolor";
+      }
+      &__list {
+        margin-bottom: 14px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3,31.3%);
+      }
+    }
+    .footer {
+      &__list {
+        gap: 0px 19px;
+      }
+    }
+}
+
+@media (max-width: 582px) {
+    .high {
+        &__list {
+            gap: 16px;
+            grid-template-columns: repeat(2, 47.3%);
+        }
+    }
+    .categories {
+        &__list {
+            gap: 16px;
+            grid-template-columns: repeat(2, 47.3%);
+        }
+        &__li_bed{
+            margin-bottom: 16px;
+        }
+        &__li_armchairs {
+          margin-bottom: 16px;
+        }
+        &__li_sofa {
+          margin-bottom: 16px;
+        }
+    }
+    .filter {
+      &__list-drop {
+        gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      &__list {
+        margin-bottom: 40px;
+        gap: 16px;
+        grid-template-columns: repeat(2, 47.3%);
+        grid-template-rows: repeat(3,32.5%);
+      }
+    }
+    .footer {
+      &__list {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+}

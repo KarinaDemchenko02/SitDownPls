@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SitDownPls</title>
+
+    <link rel="preload" href="fonts/MullerRegular.woff" as="font" crossorigin>
+    <link rel="preload" href="fonts/MullerRegular.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff" as="font" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Regular.woff" as="font" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff" as="font" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/playfair-display-black.woff" as="font" crossorigin>
+    <link rel="preload" href="fonts/playfair-display-black.woff2" as="font" crossorigin>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="choices.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script defer src="https://unpkg.com/@popperjs/core@2"></script>
+    <script defer src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+    <script defer src="https://unpkg.com/tippy.js@6"></script>
+    <script defer src="inputmask.min.js"></script>
+    <script defer src="just-validate.min.js"></script>
+    <script defer src="choices.min.js"></script>
+    <script defer src="js/_card.js"></script>
+</head>
+<body>
+  @include('partials/header.html')
+  <main>
+    <section class="card">
+      <h1 class="visually-hidden">SitDownPls - интернет магазин мебели</h1>
+      <div class="card__container container">
+        <ul class="card__navigation">
+          <li class="card__li-navigation">
+            <a class="card__link-navigation" href="index.html">Главная /</a>
+          </li>
+          <li class="card__li-navigation">
+            <a class="card__link-navigation" href="catalog.html">Каталог /</a>
+          </li>
+          <li class="card__li-navigation">
+            <a class="card__link-navigation" href="#">Диваны /</a>
+          </li>
+          <li class="card__li-navigation">
+            <a class="card__link-navigation" href="#">Прямые диваны /</a>
+          </li>
+          <li class="card__li-navigation">
+            <a class="card__link-navigation card__link-now" href="#">D-31</a>
+          </li>
+        </ul>
+        <div class="card__section-container">
+          <div class="card__section-left">
+            <div class="card__window">
+              <div class="card__window-models">
+                <div class="card__window-model">
+                  <div class="card__window-main-content">
+                    <button class="card__window-close">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="card__icon-bg-window" width="20" height="20" fill="#EBD1FF"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.3812 0.397739L11.2581 9.03977C11.8029 9.57009 11.8029 10.4299 11.2581 10.9602L2.3812 19.6023C1.83647 20.1326 0.953281 20.1326 0.408549 19.6023C-0.136183 19.0719 -0.136183 18.2121 0.408549 17.6818L8.29914 10L0.40855 2.31819C-0.136182 1.78787 -0.136181 0.928057 0.408551 0.397739C0.953283 -0.13258 1.83647 -0.13258 2.3812 0.397739Z" fill="CurrentColor"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6188 0.397739L8.74188 9.03977C8.19715 9.57009 8.19715 10.4299 8.74188 10.9602L17.6188 19.6023C18.1635 20.1326 19.0467 20.1326 19.5914 19.6023C20.1362 19.0719 20.1362 18.2121 19.5914 17.6818L11.7009 10L19.5914 2.31819C20.1362 1.78787 20.1362 0.928057 19.5914 0.397739C19.0467 -0.13258 18.1635 -0.13258 17.6188 0.397739Z" fill="CurrentColor"/>
+                      </svg>
+                    </button>
+                    <div class="card__swiper-window card__swiper_1-window ">
+                      <ul class="swiper-wrapper">
+                        <li class="card__swiper-slide swiper-slide">
+                          <img class="card__window-img" src="images/window-sofa.png" alt="Диван тканевый прямой “D-31”">
+                        </li>
+                        <li class="card__swiper-slide swiper-slide">
+                          <img class="card__window-img" src="images/card-sofa-1_big.png" alt="Диван тканевый прямой “D-31”">
+                        </li>
+                        <li class="card__swiper-slide swiper-slide">
+                          <img class="card__window-img card__img-small-2" src="images/card-sofa-2_big.png" alt="Диван тканевый прямой “D-31”">
+                        </li>
+                        <li class="card__swiper-slide swiper-slide">
+                          <img class="card__window-img" src="images/card-sofa-3_big.png" alt="Диван тканевый прямой “D-31”">
+                        </li>
+                        <li class="card__swiper-slide swiper-slide">
+                          <img class="card__window-img" src="images/card-sofa-4_big.png" alt="Диван тканевый прямой “D-31”">
+                        </li>
+                      </ul>
+                    </div>
+                    <div thumbsSlider="" class="card__swiper-window card__swiper_2-window">
+                      <ul class="card__list-window swiper-wrapper">
+                        <li class="card__li-img card__li-img-window swiper-slide">
+                          <img class="card__item-images" src="images/window-sofa-small.png" alt="Диван тканевый прямой “D-31”">
+                        </li>
+                        <li class="card__li-img card__li-img-window swiper-slide">
+                          <picture>
+                            <img class="card__item-images" src="images/card-sofa-1_mobile.png" alt="Диван тканевый прямой “D-31”">
+                          </picture>
+                        </li>
+                        <li class="card__li-img card__li-img-window swiper-slide">
+                          <picture>
+                            <img class="card__item-images" src="images/card-sofa-2_mobile.png" alt="Диван тканевый прямой “D-31”">
+                          </picture>
+                        </li>
+                        <li class="card__li-img card__li-img-window swiper-slide">
+                          <picture>
+                            <img class="card__item-images" src="images/card-sofa-3_mobile.png" alt="Диван тканевый прямой “D-31”">
+                          </picture>
+                        </li>
+                        <li class="card__li-img card__li-img-window swiper-slide">
+                          <picture>
+                            <img class="card__item-images" src="images/card-sofa-4_mobile.png" alt="Диван тканевый прямой “D-31”">
+                          </picture>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card__swiper card__swiper_1">
+              <ul class="card__wrapper-big swiper-wrapper">
+                <li class="card__swiper-slide swiper-slide">
+                  <img class="card__main-img" src="images/card-sofa.png" alt="Диван тканевый прямой “D-31”">
+                </li>
+                <li class="card__swiper-slide swiper-slide">
+                  <img class="card__main-img-small" src="images/card-sofa-1_big.png" alt="Диван тканевый прямой “D-31”">
+                </li>
+                <li class="card__swiper-slide swiper-slide">
+                  <img class="card__main-img-small card__img-small-2" src="images/card-sofa-2_big.png" alt="Диван тканевый прямой “D-31”">
+                </li>
+                <li class="card__swiper-slide swiper-slide">
+                  <img class="card__main-img-small" src="images/card-sofa-3_big.png" alt="Диван тканевый прямой “D-31”">
+                </li>
+                <li class="card__swiper-slide swiper-slide">
+                  <img class="card__main-img-small" src="images/card-sofa-4_big.png" alt="Диван тканевый прямой “D-31”">
+                </li>
+              </ul>
+              <div class="swiper-button-next-card"></div>
+              <div class="swiper-button-prev-card"></div>
+            </div>
+            <div class="card__section-adapt">
+              <div thumbsSlider="" class="card__swiper card__swiper_2">
+                <ul class="card__list-images swiper-wrapper">
+                  <li class="card__li-img swiper-slide">
+                    <img class="card__item-images" src="images/card-sofa-small.png" alt="Диван тканевый прямой “D-31”">
+                  </li>
+                  <li class="card__li-img card__li-img_1 swiper-slide">
+                    <picture>
+                      <source srcset="images/card-sofa-1_768.png" media="(max-width: 950px)">
+                      <source srcset="images/card-sofa-1_1024.png" media="(max-width: 1110px)">
+                      <img class="card__item-images" src="images/card-sofa-1.png" alt="Диван тканевый прямой “D-31”">
+                    </picture>
+                  </li>
+                  <li class="card__li-img card__li-img_2 swiper-slide">
+                    <picture>
+                      <source srcset="images/card-sofa-2_768.png" media="(max-width: 950px)">
+                      <source srcset="images/card-sofa-2_1024.png" media="(max-width: 1110px)">
+                      <img class="card__item-images" src="images/card-sofa-2.png" alt="Диван тканевый прямой “D-31”">
+                    </picture>
+                  </li>
+                  <li class="card__li-img swiper-slide">
+                    <picture>
+                      <source srcset="images/card-sofa-3_768.png" media="(max-width: 950px)">
+                      <source srcset="images/card-sofa-3_1024.png" media="(max-width: 1110px)">
+                      <img class="card__item-images" src="images/card-sofa-3.png" alt="Диван тканевый прямой “D-31”">
+                    </picture>
+                  </li>
+                  <li class="card__li-img swiper-slide card__li-img_4">
+                    <picture>
+                      <source srcset="images/card-sofa-4_768.png" media="(max-width: 950px)">
+                      <source srcset="images/card-sofa-4_1024.png" media="(max-width: 1110px)">
+                      <img class="card__item-images" src="images/card-sofa-4.png" alt="Диван тканевый прямой “D-31”">
+                    </picture>
+                  </li>
+                </ul>
+              </div>
+              <div class="card__main-content-adapt">
+                <span class="card__star">
+                  <svg class="card__icon-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                  </svg>
+                  4,8
+                </span>
+                <h2 class="card__heading-name">Диван тканевый прямой “D-31”</h2>
+                <span class="card__info-more">Мини 120 см без ящика Stark синий (Рогожка)</span>
+                <span class="card__price">28 490 руб</span>
+                <button class="card__button-buy">Купить в один клик</button>
+                <a class="card__add" href="#">+ Добавить в корзину</a>
+              </div>
+            </div>
+            <div class="card__info">
+              <h2 class="card__info-heading">Опорный механизм</h2>
+              <p class="card__main-text">Опорный механизм напоминает пантограф, к которому добавили дополнительную секцию. У опорного дивана сиденье «выпрыгивает»
+                вперёд и вытаскивает вторую часть спального места. Заключительный штрих — опустить спинку.</p>
+              <p class="card__main-text">Этот механизм не портит пол и не боится ковров. Требуется чуть больше силы,
+                чтобы разложить диван, но подросток справится.</p>
+            </div>
+            <ul class="card__list-constructor">
+              <li class="card__li-constructor">
+                <img class="card__constructor-img" src="images/card-constructor-1.png" alt="">
+              </li>
+              <li class="card__li-constructor">
+                <img class="card__constructor-img" src="images/card-constructor-2.png" alt="">
+              </li>
+            </ul>
+          </div>
+          <div class="card__section-right">
+            <div class="card__main-content">
+              <span class="card__star">
+                <svg class="card__icon-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                </svg>
+                4,8
+              </span>
+              <h2 class="card__heading-name">Диван тканевый прямой “D-31”</h2>
+              <span class="card__info-more">Мини 120 см без ящика Stark синий (Рогожка)</span>
+              <span class="card__price">28 490 руб</span>
+              <button class="card__button-buy">Купить в один клик</button>
+              <a class="card__add" href="#">+ Добавить в корзину</a>
+            </div>
+            <div class="card__window-form">
+              <div class="card__window-models-form">
+                <div class="card__window-model-form">
+                  <div class="card__window-main-content-form">
+                    <button class="card__window-close-form">
+                      <svg class="card__window-close-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="card__icon-bg-window" width="20" height="20" fill="#EBD1FF"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.3812 0.397739L11.2581 9.03977C11.8029 9.57009 11.8029 10.4299 11.2581 10.9602L2.3812 19.6023C1.83647 20.1326 0.953281 20.1326 0.408549 19.6023C-0.136183 19.0719 -0.136183 18.2121 0.408549 17.6818L8.29914 10L0.40855 2.31819C-0.136182 1.78787 -0.136181 0.928057 0.408551 0.397739C0.953283 -0.13258 1.83647 -0.13258 2.3812 0.397739Z" fill="CurrentColor"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6188 0.397739L8.74188 9.03977C8.19715 9.57009 8.19715 10.4299 8.74188 10.9602L17.6188 19.6023C18.1635 20.1326 19.0467 20.1326 19.5914 19.6023C20.1362 19.0719 20.1362 18.2121 19.5914 17.6818L11.7009 10L19.5914 2.31819C20.1362 1.78787 20.1362 0.928057 19.5914 0.397739C19.0467 -0.13258 18.1635 -0.13258 17.6188 0.397739Z" fill="CurrentColor"/>
+                      </svg>
+                    </button>
+                    <h2 class="card__window-heading-form">Купить в один клик</h2>
+                    <p class="card__window-info-form">Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении часа.</p>
+                    <form class="card__form-container" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+                      <label class="card__form-label">
+                          <input class="card__form-input" name="name" type="text" placeholder="Как вас зовут?" data-validate-field="name">
+                      </label>
+                      <label class="card__form-label">
+                          <input class="card__form-input" name="tel" type="tel" placeholder="Ваш телефон" data-validate-field="tel" data-validate-rules="phone">
+                      </label>
+                      <button class="card__button-send">Отправить</button>
+                    </form>
+                    <form class="card__form-check">
+                      <label class="card__check-container">
+                          <input class="check" type="checkbox" name="check">
+                          <span class="check-box"></span>
+                          <span class="card__check-text">Принимаю <a class="card__link-check" href="#">пользовательское соглашение</a></span>
+                      </label>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="card__about-sofa">
+              <li class="card__item-about">
+                <span class="card__li-name">Гарантия</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">18 месяцев</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Артикул</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">AAA41269004</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Длина</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">163 см</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Высота</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">90 см</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Глубина</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">108 см</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Спальное место</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">200 см х 125 см</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Высота посадки</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">45 см</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Механизм</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">Опорный</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Тип обивки</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">Рогожка</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Цвет</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">Синий</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Наполнитель</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">Независимый пружинный блок</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Материал каркаса</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">Металл. рама с дерев. латами</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Количество мест</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">Двухместные</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Категория</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">Прямые тканевые диваны</span>
+              </li>
+              <li class="card__item-about">
+                <span class="card__li-name">Возврат</span>
+                <span class="card__ellipsis"></span>
+                <span class="card__characteristic">Условия</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="products">
+      <div class="container">
+        <div class="products__slider">
+          <div class="products__container-button">
+            <h2 class="products__heading">Похожие товары</h2>
+            <div class="swiper-right-btns">
+              <button class="sw-btn swiper-btn-prev-products" disabled  aria-label="Листать слайдер назад">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_663_1730)">
+                      <circle class="products__icon-bg" cx="16" cy="16" r="15" fill="CurrentColor" stroke="CurrentColor" stroke-width="2"/>
+                      <path d="M14 11L19 16L14 21" stroke="CurrentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath>
+                      <rect width="32" height="32" fill="white"/>
+                      </clipPath>
+                      </defs>
+                  </svg>
+              </button>
+              <button class="sw-btn swiper-btn-next-products" disabled aria-label="Листать слайдер дальше">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_663_1730)">
+                      <circle class="products__icon-bg" cx="16" cy="16" r="15" fill="CurrentColor" stroke="CurrentColor" stroke-width="2"/>
+                      <path d="M14 11L19 16L14 21" stroke="CurrentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                      <clipPath>
+                      <rect width="32" height="32" fill="white"/>
+                      </clipPath>
+                      </defs>
+                  </svg>
+              </button>
+            </div>
+          </div>
+          <ul class="swiper-wrapper">
+            <li class="products__li swiper-slide">
+              <span class="products__star">
+                  <svg class="products__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                  </svg>
+                  4,5
+              </span>
+              <img class="products__img-furniture" src="images/high-card-16.png" alt="Диван велюровый R-85">
+              <h3 class="products__heading-card">Диван велюровый <br> “R-85”</h3>
+              <span class="products__price">34 990 руб</span>
+              <button class="products__button-buy">Купить</button>
+            </li>
+            <li class="products__li swiper-slide">
+              <span class="products__star">
+                  <svg class="products__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                  </svg>
+                  4,6
+              </span>
+              <img class="products__img-furniture" src="images/high-card-13.png" alt="Диван флоковый “H-58">
+              <h3 class="products__heading-card">Диван флоковый <br> “H-58”</h3>
+              <span class="products__price">23 990 руб</span>
+              <button class="products__button-buy">Купить</button>
+            </li>
+            <li class="products__li swiper-slide">
+              <span class="products__star">
+                  <svg class="products__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                  </svg>
+                  4,5
+              </span>
+              <img class="products__img-furniture" src="images/high-card-17.png" alt="Диван велюровый S-44">
+              <h3 class="products__heading-card">Диван велюровый <br> “S-44”</h3>
+              <span class="products__price">19 990 руб</span>
+              <button class="products__button-buy">Купить</button>
+            </li>
+            <li class="products__li swiper-slide">
+              <span class="products__star">
+                  <svg class="products__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                  </svg>
+                  4,8
+              </span>
+              <img class="products__img-furniture" src="images/high-card-7.png" alt="Диван шиниловый V-43">
+              <h3 class="products__heading-card">Диван шиниловый <br> “V-43”</h3>
+              <span class="products__price">19 990 руб</span>
+              <button class="products__button-buy">Купить</button>
+            </li>
+            <li class="products__li swiper-slide">
+              <span class="products__star">
+                  <svg class="products__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                  </svg>
+                  4,6
+              </span>
+              <img class="products__img-furniture" src="images/high-card-11.png" alt="Диван из шинила С-42">
+              <h3 class="products__heading-card">Диван из шинила <br> “С-42”</h3>
+              <span class="products__price">18 990 руб</span>
+              <button class="products__button-buy">Купить</button>
+            </li>
+            <li class="products__li swiper-slide">
+              <span class="products__star">
+                  <svg class="products__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                  </svg>
+                  4,5
+              </span>
+              <img class="products__img-furniture" src="images/high-card-12.png" alt="Диван флоковый F-41">
+              <h3 class="products__heading-card">Диван флоковый <br> “F-41”</h3>
+              <span class="products__price">17 990 руб</span>
+              <button class="products__button-buy">Купить</button>
+            </li>
+            <li class="products__li swiper-slide">
+              <span class="products__star">
+                  <svg class="products__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                  </svg>
+                  4,6
+              </span>
+              <img class="products__img-furniture" src="images/high-card-10.png" alt="Диван флоковый H-64">
+              <h3 class="products__heading-card">Диван флоковый <br> “H-64”</h3>
+              <span class="products__price">25 990 руб</span>
+              <button class="products__button-buy">Купить</button>
+            </li>
+            <li class="products__li swiper-slide">
+              <span class="products__star">
+                  <svg class="products__ison-star" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z" fill="#FF862F"/>
+                  </svg>
+                  4,7
+              </span>
+              <img class="products__img-furniture" src="images/high-card-8.png" alt="Диван велюровый S-99">
+              <h3 class="products__heading-card">Диван велюровый <br> “S-99”</h3>
+              <span class="products__price">19 990 руб</span>
+              <button class="products__button-buy">Купить</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  @include('partials/footer.html')
+</body>
+</html>

@@ -1,0 +1,245 @@
+body {
+  min-width: 320px;
+}
+
+.cooperation {
+  &__container {
+    max-width: 842px;
+  }
+  &__nav {
+    margin-bottom: 32px;
+  }
+  &__heading-nav {
+    font-size: 14px;
+    line-height: 14px;
+    color: $color-grey;
+  }
+  &__link {
+    font-size: 14px;
+    line-height: 14px;
+    color: $color-primary-shade;
+  }
+  &__link-main {
+    font-size: 14px;
+    line-height: 14px;
+    color: $color-grey;
+    transition: color .3s ease-in-out;
+    &:hover {
+      color: $color-primary;
+    }
+    &:focus {
+      outline: none;
+      color: $color-primary-shade;
+    }
+    &:active {
+      color: $color-primary-shade;
+    }
+  }
+  &__heading {
+    margin: 0;
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    color: $color-black;
+  }
+  &__suppliers {
+    margin-bottom: 32px
+  }
+  &__heading-suppliers {
+    @include headingCooperation();
+  }
+  &__info-suppliers {
+    @include infoCooperation();
+  }
+  &__get {
+    margin-bottom: 32px;
+  }
+  &__get-list {
+    max-width: 620px;
+  }
+  &__get-item-info {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-grey-shade;
+  }
+  &__get-heading {
+    @include headingCooperation();
+  }
+  &__get-li {
+    padding-left: 37px;
+    background-repeat: no-repeat;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  &__get-li_network {
+    background-image: url(../images/network.svg);
+  }
+  &__get-li_briefcase {
+    background-image: url(../images/briefcase.svg);
+  }
+  &__get-li_request {
+    background-image: url(../images/git-pull-request.svg);
+  }
+  &__advantages {
+    margin-bottom: 32px
+  }
+  &__heading-advantages {
+    @include headingCooperation();
+  }
+  &__item-heading-advantages {
+    margin: 0px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-secondary;
+  }
+  &__item-info-advantages {
+    @include infoCooperation();
+  }
+  &__li-advantages:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  &__guarantees {
+    margin-bottom: 54px;
+  }
+  &__list-guarantees {
+    padding: 0px;
+    padding-left: 18px;
+    max-width: 806px
+  }
+  &__heading-guarantees {
+    @include headingCooperation();
+  }
+  &__info-guarantees {
+    @include infoCooperation();
+    margin-left: 8px;
+  }
+  &__li-guarantees:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  ::marker {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 29px;
+    color: $color-secondary;
+  }
+  &__info-term {
+    position: relative;
+    margin: 0px;
+    margin-bottom: 92px;
+    padding-left: 109px;
+    width: 75%;
+    font-size: 24px;
+    line-height: 36px;
+    color: $color-black;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: -32%;
+      background-image: url(../images/pen.png);
+      width: 77px;
+      min-height: 116px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (max-width: 1255px) {
+  .cooperation {
+    &__list-guarantees {
+      max-width: 835px;
+    }
+    &__list-guarantees {
+      margin: 0px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .cooperation {
+    &__advantages-list {
+      width: 99%;
+    }
+    &__info-term {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    &__form {
+      padding-bottom: 0px;
+    }
+  }
+  .cooperation {
+    &__heading-nav {
+      display: none;
+    }
+    &__heading {
+      font-size: 24px;
+      line-height: 24px;
+    }
+    &__heading-suppliers {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__info-suppliers {
+      font-size: 14px;
+      line-height: 25px;
+    }
+    &__get-heading {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__get-item-info {
+      font-size: 14px;
+      line-height: 21px;
+    }
+    &__heading-advantages {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &__advantages-list {
+      width: 100%;
+    }
+    &__item-info-advantages {
+      font-size: 14px;
+      line-height: 25px;
+    }
+    &__guarantees {
+      margin-bottom: 32px;
+    }
+    &__list-guarantees {
+      max-width: 290px;
+    }
+    &__heading-guarantees {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__li-guarantees:not(:last-child) {
+      margin-bottom: 9px;
+    }
+    &__info-guarantees {
+      font-size: 14px;
+      line-height: 25px;
+    }
+    &__info-term {
+      width: 80%;
+      margin-bottom: 70px;
+      padding-left: 52px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__info-term::before {
+      background-size: 47% 47%;
+      top: 12%;
+      left: 0;
+    }
+  }
+}
